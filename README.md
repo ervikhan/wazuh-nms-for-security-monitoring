@@ -1,8 +1,10 @@
 <h2>Setup Wazuh for Security Monitoring</h2>
+
 - **Base On Ubuntu 20.04**
 - **Wazuh Version : v4.3.10**
 
 <h3>Wazuh Indexer Installation</h3>
+
 - **Generate Certificate**
     - Create directory
         
@@ -194,7 +196,8 @@
         ```
 
 <h3>Wazuh Manager/Wazuh Server Installation</h3>
-- Node Installation
+
+- **Node Installation**
     - Install adds-on package
         
         ```bash
@@ -236,7 +239,7 @@
         systemctl status wazuh-manager
         ```
         
-- Filebeat Installation
+- **Filebeat Installation**
     - Install service
         
         ```bash
@@ -290,7 +293,7 @@
         chmod go+r /etc/filebeat/wazuh-template.json
         ```
         
-- Deploy Certificate
+- **Deploy Certificate**
     - Copy `wazuh-certificates.tar` to /etc/filebeat/certs
         
         ```bash
@@ -336,7 +339,7 @@
         systemctl status filebeat
         ```
         
-- Testing
+- **Testing**
     - Test filebeat
         
         ```bash
@@ -362,7 +365,8 @@
         ```
 
 <h3>Wazuh Dashboard Installation</h3>
-- Package Installation
+
+- **Package Installation**
     - Install Package Dependencies
         
         ```bash
@@ -399,7 +403,7 @@
         apt-get -y install wazuh-dashboard
         ```
         
-- Wazuh Dashboard Installation
+- **Wazuh Dashboard Installation**
     - File Edit
         
         ```bash
@@ -417,7 +421,7 @@
            opensearch.ssl.verificationMode: certificate
         ```
         
-- Deploy Certificate
+- **Deploy Certificate**
     - copy `wazuh-certificates.tar` to /etc/wazuh-dashboard/certs
         
         ```bash
@@ -488,7 +492,7 @@
         systemctl restart wazuh-manager
         ```
         
-- Testing
+- **Testing**
     - Open browser
         
         ```bash
@@ -520,7 +524,8 @@
         ```
 
 <h3>Wazuh Agent Installation</h3>
-Installed on Linux Ubuntu 20.04
+
+**Installed on Linux Ubuntu 20.04**
 
 - Install GPG key
     
